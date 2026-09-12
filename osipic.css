@@ -1,0 +1,51 @@
+#previewGrid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    width: 360px;
+    margin: 0;
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    border: 2px solid #ccc;
+    overflow: hidden;
+}
+
+#previewGrid img {
+    width:  100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+#resultCanvas {
+    width: 360px;
+    border: 2px solid #ccc;
+    margin-top: 10px;
+}
+
+#cropModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    z-index: 1000;
+}
+
+#cropImage {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+#cropButton {
+    display: block;
+    margin-top: 10px;
+}
