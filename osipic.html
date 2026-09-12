@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+
+<head>
+  <meta charset="UTF-8">
+  <title> 推しピク </title>
+
+  <link rel="stylesheet" href="osipic.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css">
+
+</head>
+<body>
+
+<header>
+  <h1>推しピク</h1>
+  <h2>推しを気軽に紹介できる画像作成サイト</h2>
+  <p>画像をアップロードで3×3のシートを作成できます。</p>
+</header>
+
+<main>
+
+  <!-- 画像追加 -->
+  <section>
+    <input
+      type="file"
+      id="imageInput"
+      accept="image/*">
+  </section>
+
+  <!-- プレビュー -->
+  <section>
+    <h3>プレビュー</h3>
+
+    <div id="previewGrid">
+
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+    </div>
+  </section>
+
+  <!-- 操作ボタン -->
+  <section id="controls">
+    <button id="generateButton">
+      実行
+    </button>
+
+    <button id="saveButton">
+      保存
+    </button>
+
+    <button id="resetButton">
+      リセット
+    </button>
+  </section>
+
+  <!-- 完成画像表示 -->
+  <section>
+    <h3>完成画像</h3>
+
+    <canvas id="resultCanvas">
+    </canvas>
+  </section>
+
+</main>
+
+<div id="cropModal">
+    <img id="cropImage">
+    <button id="cropButton">
+        切り抜き確定
+    </button>
+</div>
+
+<footer>
+  更新日：2026/09/12
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js"></script>
+<script src="osipic.js"></script>
+</body>
+</html>
